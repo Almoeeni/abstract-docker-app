@@ -38,6 +38,7 @@ class deploy_db extends AbstractCLIScript
             'Database\Primary\Users',
             'Database\Primary\Users\Logs',
             'Database\Primary\Users\Tally',
+            'Database\Primary\Test',
         ]);
 
         $this->print("");
