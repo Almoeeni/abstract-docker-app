@@ -4,15 +4,13 @@ declare(strict_types=1);
 namespace App\Common\Database\Primary;
 
 
-use App\Common\Test;
 use App\Common\Database\AbstractAppTable;
-use App\Common\Exception\AppException;
-use App\Common\Kernel;
+
 use Comely\Database\Exception\ORM_ModelNotFoundException;
 use Comely\Database\Schema\Table\Columns;
 use Comely\Database\Schema\Table\Constraints;
 
-class Tests extends AbstractAppTable
+class Test extends AbstractAppTable
 {
 
     public const NAME = 'tests';
