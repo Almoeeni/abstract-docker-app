@@ -23,7 +23,7 @@ class Tests extends AbstractAppTable
      * @param Constraints $constraints
      */
 
-    public function structure(Columns $cols,Constraints $constraints )
+    public function structure(Columns $cols,Constraints $constraints ): void
     {
         $cols->int('id')->bytes(4)->Unsigned()->autoIncrement();
         $cols->string('book_name')->length(32)->nullable();
