@@ -13,7 +13,7 @@ use Comely\Database\Schema\Table\Constraints;
 class Test extends AbstractAppTable
 {
 
-    public const NAME = 'tests';
+    public const NAME = 'test';
     public const MODEL = 'App\Common\Test';
 
     /**
