@@ -126,6 +126,7 @@ class Add extends AbstractAdminController {
                 throw new AppControllerException('Failed to insert author row');
             });
         }catch (AppException $e) {
+            print_r($e);
             $db->rollBack();
             throw $e;
         }
