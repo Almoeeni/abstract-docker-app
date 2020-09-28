@@ -59,8 +59,11 @@ class Add extends AbstractAdminController {
             if(!$book_name_len){
                 throw new AppControllerException("Book name is required");
             }
-            if(!$book_name_len < 3){
+            elseif(!$book_name_len < 3){
                 throw new AppControllerException("Book name is too short");
+            }
+            elseif(!$book_name_len > 32){
+                throw new AppControllerException("Book name is too Long");
             }
 
         } catch (AppControllerException $e){
@@ -68,6 +71,28 @@ class Add extends AbstractAdminController {
             throw $e;
         }
 
+// E-mail address
+        try {
+            $email = trim(strval($this->input()->get("email")));
+            if (!$email) {
+                throw new AppControllerException('E-mail address is required');
+            } elseif (strlen($email) > 64) {
+                throw new AppControllerException('E-mail address is too long');
+            } elseif (!Validator::isValidEmailAddress($email)) {
+                throw new AppControllerException('Invalid e-mail address');
+            }
+
+            // Duplicate Check
+            $dup = $db->query()->table(Test::NAME)
+                ->where('`email`=?', [$email])
+                ->fetch();
+            if ($dup->count()) {
+                throw new AppControllerException('E-mail address is already registered!');
+            }
+        } catch (AppControllerException $e) {
+            $e->setParam("email");
+            throw $e;
+        }
       $this->response()->set("status", true);
       $this->messages()->success("New Author account has been registered!");
       $this->messages()->info("Redirecting...");
