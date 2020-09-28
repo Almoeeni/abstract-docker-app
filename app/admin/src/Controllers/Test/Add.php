@@ -20,7 +20,7 @@ class Add extends AbstractAdminController {
     public function adminCallback(): void
     {
         $db = $this->app->db()->primary();
-//        Schema::Bind($db, 'App\Common\Database\Primary\Countries');
+        Schema::Bind($db, 'App\Common\Database\Primary\Test');
 //        Schema::Bind($db, 'App\Common\Database\Primary\Users');
     }
 
