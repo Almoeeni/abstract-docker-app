@@ -1,12 +1,12 @@
 {knit "header"}
 <div class="row">
     <div class="col-12">
-        <form method="post" action="{$page.authRoot}users/add" class="xhr-form">
+        <form method="post" action="{$page.authRoot}test/add" class="xhr-form">
             <input type="hidden" name="xsrf" value="{$page.token}">
             <div class="card">
                 <div class="card-header">
                    <h5 class="card-title mb-0"><i class="mdi mdi-account-plus-outline mr-2"></i> Create Test Account</h5>
-                 </div>
+                </div>
             </div>
         </form>
     </div>

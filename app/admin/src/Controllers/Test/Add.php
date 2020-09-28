@@ -22,7 +22,7 @@ class Add extends AbstractAdminController {
 
     public function get()
     {
-        $template = $this->template("test/add.knit");
+        $template = $this->template("/test/add.knit");
          //   ->assign("form", $form->array());
         $this->body($template);
         // Response
