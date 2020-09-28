@@ -41,7 +41,7 @@ class Add extends AbstractAdminController {
     public function post () : void
     {
         $this->verifyXSRF();
-        $this->totpSessionCheck();
+       // $this->totpSessionCheck();
 
         if (!$this->authAdmin->privileges()->root()) {
             if (!$this->authAdmin->privileges()->manageUsers) {
