@@ -13,8 +13,10 @@ class Add extends AbstractAdminController {
 
     public function adminCallback(): void
     {
-        $db = $this->app->db()->primary();
+
         echo "hello";
+        $db = $this->app->db()->primary();
+
     }
 
 }
