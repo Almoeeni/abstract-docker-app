@@ -94,7 +94,7 @@
                         Test
                         <div class="sb-sidenav-collapse-arrow"><i class="ion ion-arrow-down-b"></i></div>
                     </a>
-                    <div class="collapse{if $page.index.a === 910} show{/if}" id="navTest" aria-labelledby="headingOne"
+                    <div class="collapse{if $page.index.a === 610} show{/if}" id="navTest" aria-labelledby="headingOne"
                          data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="{$page.authRoot}test/add">

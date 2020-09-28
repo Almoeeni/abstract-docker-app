@@ -22,7 +22,7 @@ class Add extends AbstractAdminController {
 
     public function get()
     {
-        $this->page()->title('Create Test')->index(1100, 20)
+        $this->page()->title('Create Test')->index(610, 20)
             ->prop("icon", "mdi mdi-account-plus-outline");
 
         $this->breadcrumbs("Test Control", null, "ion ion-ios-people");
