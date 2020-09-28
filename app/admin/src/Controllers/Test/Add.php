@@ -49,7 +49,7 @@ class Add extends AbstractAdminController {
             }
         }
 
-    //    $db = $this->app()->db()->primary();
+      $db = $this->app()->db()->primary();
 
         //var_dump($this->input()->get("book_name"));
 
