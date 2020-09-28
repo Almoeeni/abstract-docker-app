@@ -26,6 +26,17 @@ class Add extends AbstractAdminController {
     public function get()
     {
         echo "i am in get";
+
+        $template = $this->template("test/add.knit");
+         //   ->assign("form", $form->array());
+        $this->body($template);
+        // Response
+        $this->response()->set("status", true);
+        $this->response()->set("disabled", true);
+        $this->messages()->success('You have been logged in!');
+        $this->messages()->info('Please wait...');
+        $this->response()->set("redirect", $this->request()->url()->root($authToken->base16()->hexits() . "/dashboard"));
+        return;
     }
 
 
