@@ -51,7 +51,24 @@ class Add extends AbstractAdminController {
 
       $db = $this->app()->db()->primary();
 
-        //var_dump($this->input()->get("book_name"));
+        try {
+            $book_name = trim(strval($this->input()->get("book_name")));
+            $book_name_len = strlen($book_name);
+            if(!$book_name_len){
+                throw new AppControllerException("Book name is required");
+            }
+
+        } catch (AppControllerException $e){
+            $e->setParam("book_name");
+            throw $e;
+        }
+
+      $this->response()->set("status", true);
+      $this->messages()->success("New Author account has been registered!");
+      $this->messages()->info("Redirecting...");
+      $this->response()->set("disabled", true);
+      //$this->response()->set("redirect", $this->authRoot . "users/search?key=email&value=" . $user->email);
+
 
     }
 
