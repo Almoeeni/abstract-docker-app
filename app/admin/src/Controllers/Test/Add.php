@@ -5,7 +5,7 @@ namespace App\Admin\Controllers\Test;
 use App\Admin\Controllers\AbstractAdminController;
 use App\Common\Exception\AppControllerException;
 use App\Common\Exception\AppException;
-use App\Common\Test as TestName;
+use App\Common\Database\Primary\Test as TestTable;
 use App\Common\Validator;
 use Comely\Database\Schema;
 use Comely\Utils\Security\Passwords;
@@ -84,7 +84,7 @@ class Add extends AbstractAdminController {
             }
 
             // Duplicate Check
-            $dup = $db->query()->table(TestName::NAME)
+            $dup = $db->query()->table(TestTable::NAME)
                 ->where('`email`=?', [$email])
                 ->fetch();
             if ($dup->count()) {
