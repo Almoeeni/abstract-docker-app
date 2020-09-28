@@ -16,7 +16,7 @@ class Test extends AbstractAppModel
 
     public int $id;
     /** @var string */
-    public string $book_name;
+    public string $bookName;
     /** @var string */
     public string $author;
     /** @var string */
