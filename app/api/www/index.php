@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 require "../vendor/autoload.php";
-echo "this page";
+
 try {
     $kernel = \App\API\APIService::Bootstrap();
     $errorHandler = new \App\Common\Kernel\ErrorHandler\HttpErrorHandler($kernel);
