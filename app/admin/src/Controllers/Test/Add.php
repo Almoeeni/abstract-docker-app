@@ -134,7 +134,7 @@ class Add extends AbstractAdminController {
         $this->messages()->success("New Author account has been registered!");
         $this->messages()->info("Redirecting...");
         $this->response()->set("disabled", true);
-     // $this->response()->set("redirect", $this->authRoot . "test/add");
+        $this->response()->set("redirect", $this->authRoot . "test/add");
 
 
     }
