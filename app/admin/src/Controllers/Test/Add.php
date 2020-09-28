@@ -38,5 +38,21 @@ class Add extends AbstractAdminController {
         return;*/
     }
 
+    public function post () : void
+    {
+        $this->verifyXSRF();
+        $this->totpSessionCheck();
+
+        if (!$this->authAdmin->privileges()->root()) {
+            if (!$this->authAdmin->privileges()->manageUsers) {
+                throw new AppControllerException('You do not have permission to add new user');
+            }
+        }
+
+        $db = $this->app()->db()->primary();
+
+        var_dump($this->input()->get());
+        exit;
+    }
 
 }
