@@ -115,7 +115,7 @@ class Add extends AbstractAdminController {
         }
 
        // try {
-            $db->beginTransaction();
+           // $db->beginTransaction();
             $author = new Test();
             $author->id = 0;
             $author->book_name = $book_name;
@@ -131,9 +131,9 @@ class Add extends AbstractAdminController {
 //            throw $e;
 //        }
         $this->response()->set("status", true);
-      $this->messages()->success("New Author account has been registered!");
-      $this->messages()->info("Redirecting...");
-      $this->response()->set("disabled", true);
+        $this->messages()->success("New Author account has been registered!");
+        $this->messages()->info("Redirecting...");
+        $this->response()->set("disabled", true);
      // $this->response()->set("redirect", $this->authRoot . "test/add");
 
 
