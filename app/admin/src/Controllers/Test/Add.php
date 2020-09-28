@@ -17,7 +17,7 @@ class Add extends AbstractAdminController {
 
     public function adminCallback(): void
     {
-        $db = $this->app->db()->primary();
+      //  $db = $this->app->db()->primary();
     }
 
     public function get()
