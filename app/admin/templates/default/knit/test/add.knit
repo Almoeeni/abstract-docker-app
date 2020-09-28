@@ -7,6 +7,15 @@
                 <div class="card-header">
                    <h5 class="card-title mb-0"><i class="mdi mdi-account-plus-outline mr-2"></i> Create Test Account</h5>
                 </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-3" for="addFullName">Book Name</label>
+                        <div class="col-md-6">
+                            <input type="text" name="book_name" id="addFullName" data-onload-value=""
+                                   placeholder="John" maxlength="32" class="form-control">
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
