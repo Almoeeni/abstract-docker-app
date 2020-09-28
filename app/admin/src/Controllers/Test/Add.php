@@ -59,6 +59,9 @@ class Add extends AbstractAdminController {
             if(!$book_name_len){
                 throw new AppControllerException("Book name is required");
             }
+            if(!$book_name_len < 3){
+                throw new AppControllerException("Book name is too short");
+            }
 
         } catch (AppControllerException $e){
             $e->setParam("book_name");
