@@ -17,7 +17,9 @@ class Add extends AbstractAdminController {
 
     public function adminCallback(): void
     {
-      //  $db = $this->app->db()->primary();
+        $db = $this->app->db()->primary();
+//        Schema::Bind($db, 'App\Common\Database\Primary\Countries');
+//        Schema::Bind($db, 'App\Common\Database\Primary\Users');
     }
 
     public function get()
@@ -49,7 +51,7 @@ class Add extends AbstractAdminController {
             }
         }
 
-      $db = $this->app()->db()->primary();
+        $db = $this->app->db()->primary();
 
         try {
             $book_name = trim(strval($this->input()->get("book_name")));
