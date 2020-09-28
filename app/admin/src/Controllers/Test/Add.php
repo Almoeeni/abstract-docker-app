@@ -114,7 +114,7 @@ class Add extends AbstractAdminController {
             throw $e;
         }
 
-        try {
+       // try {
             $db->beginTransaction();
             $author = new Test();
             $author->id = 0;
@@ -125,11 +125,11 @@ class Add extends AbstractAdminController {
             $author->query()->insert(function () {
                 throw new AppControllerException('Failed to insert author row');
             });
-        }catch (AppException $e) {
-            print_r($e);
-            $db->rollBack();
-            throw $e;
-        }
+//        }catch (AppException $e) {
+//            print_r($e);
+//            $db->rollBack();
+//            throw $e;
+//        }
         $this->response()->set("status", true);
       $this->messages()->success("New Author account has been registered!");
       $this->messages()->info("Redirecting...");
