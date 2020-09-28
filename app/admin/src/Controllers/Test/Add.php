@@ -122,7 +122,9 @@ class Add extends AbstractAdminController {
             $author->email = $email;
             $author->author = $author_name;
             $author->timeStamp = time();
-            $author->query()->insert();
+            $author->query()->insert(function () {
+                throw new AppControllerException('Failed to insert author row');
+            });
         }catch (AppException $e) {
             $db->rollBack();
             throw $e;
