@@ -5,6 +5,7 @@ namespace App\Admin\Controllers\Test;
 use App\Admin\Controllers\AbstractAdminController;
 use App\Common\Exception\AppControllerException;
 use App\Common\Exception\AppException;
+use App\Common\Test as TestName;
 use App\Common\Validator;
 use Comely\Database\Schema;
 use Comely\Utils\Security\Passwords;
@@ -83,7 +84,7 @@ class Add extends AbstractAdminController {
             }
 
             // Duplicate Check
-            $dup = $db->query()->table(Test::NAME)
+            $dup = $db->query()->table(TestName::NAME)
                 ->where('`email`=?', [$email])
                 ->fetch();
             if ($dup->count()) {
@@ -93,6 +94,8 @@ class Add extends AbstractAdminController {
             $e->setParam("email");
             throw $e;
         }
+
+
       $this->response()->set("status", true);
       $this->messages()->success("New Author account has been registered!");
       $this->messages()->info("Redirecting...");
