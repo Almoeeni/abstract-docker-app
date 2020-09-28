@@ -6,6 +6,7 @@ use App\Admin\Controllers\AbstractAdminController;
 use App\Common\Exception\AppControllerException;
 use App\Common\Exception\AppException;
 use App\Common\Database\Primary\Test as TestTable;
+use App\Common\Test;
 use App\Common\Validator;
 use Comely\Database\Schema;
 use Comely\Utils\Security\Passwords;
@@ -95,8 +96,37 @@ class Add extends AbstractAdminController {
             throw $e;
         }
 
+        try {
+            $author_name = trim(strval($this->input()->get("author_name")));
+            $author_name_len = strlen($author_name);
+            if(!$author_name_len){
+                throw new AppControllerException("Book name is required");
+            }
+            elseif($author_name_len < 3){
+                throw new AppControllerException("Book name is too short");
+            }
+            elseif($author_name_len > 32){
+                throw new AppControllerException("Book name is too Long");
+            }
 
-      $this->response()->set("status", true);
+        } catch (AppControllerException $e){
+            $e->setParam("author_name");
+            throw $e;
+        }
+
+        try {
+            $db->beginTransaction();
+            $author = new Test();
+            $author->book_name = $book_name;
+            $author->email = $email;
+            $author->author = $author_name;
+
+            $author->query()->insert();
+        }catch (AppException $e) {
+            $db->rollBack();
+            throw $e;
+        }
+        $this->response()->set("status", true);
       $this->messages()->success("New Author account has been registered!");
       $this->messages()->info("Redirecting...");
       $this->response()->set("disabled", true);
