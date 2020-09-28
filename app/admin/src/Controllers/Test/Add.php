@@ -9,6 +9,10 @@ use App\Common\Validator;
 use Comely\Database\Schema;
 use Comely\Utils\Security\Passwords;
 
+/**
+ * Class Add
+ * @package App\Admin\Controllers\Test
+ */
 class Add extends AbstractAdminController {
 
     public function adminCallback(): void
@@ -18,5 +22,11 @@ class Add extends AbstractAdminController {
         $db = $this->app->db()->primary();
 
     }
+
+    public function get()
+    {
+        echo "i am in get";
+    }
+
 
 }
