@@ -117,10 +117,11 @@ class Add extends AbstractAdminController {
         try {
             $db->beginTransaction();
             $author = new Test();
+            $author->id = 0;
             $author->book_name = $book_name;
             $author->email = $email;
             $author->author = $author_name;
-
+            $author->timeStamp = time();
             $author->query()->insert();
         }catch (AppException $e) {
             $db->rollBack();
