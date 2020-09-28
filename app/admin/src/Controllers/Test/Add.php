@@ -22,6 +22,10 @@ class Add extends AbstractAdminController {
 
     public function get()
     {
+        $this->page()->title('Create Test')->index(1100, 20)
+            ->prop("icon", "mdi mdi-account-plus-outline");
+
+        $this->breadcrumbs("Users Control", null, "ion ion-ios-people");
         $template = $this->template("/test/add.knit");
          //   ->assign("form", $form->array());
         $this->body($template);
