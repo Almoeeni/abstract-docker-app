@@ -17,16 +17,11 @@ class Add extends AbstractAdminController {
 
     public function adminCallback(): void
     {
-
-        echo "hello";
         $db = $this->app->db()->primary();
-
     }
 
     public function get()
     {
-        echo "i am in get";
-
         $template = $this->template("test/add.knit");
          //   ->assign("form", $form->array());
         $this->body($template);
