@@ -1,4 +1,4 @@
-<?php  var_dump($authorEdit);
+<?php  var_dump($editAuthor);
 exit;
 ?>
 {knit "header"}
