@@ -139,7 +139,7 @@ class Add extends AbstractAdminController {
 
     }
 
-    public function authorList() : void
+    public function  getList() : void
     {
         $this->page()->title('Author Listing')->index(610, 20)
             ->prop("icon", "mdi mdi-account-plus-outline");
