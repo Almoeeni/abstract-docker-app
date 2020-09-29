@@ -34,7 +34,7 @@
                          {$author.author}
                         </td>
                         <td class="text-center">
-                          <span class="text-muted"> {$author.book_name}</span>
+                            {$author.book_name}
                         </td>
                         <td class="text-center">
                             <div class="btn-group btn-group-sm">
@@ -46,8 +46,7 @@
 
                                 <a href=""
                                    class="btn btn-sm btn-outline-dark" data-toggle="tooltip" data-placement="bottom"
-                                   title="Activity Log"><i
-                                        class="mdi mdi-table"></i></a>
+                                   title="Activity Log"><i class="mdi mdi-table"></i></a>
                             </div>
                         </td>
                     </tr>
