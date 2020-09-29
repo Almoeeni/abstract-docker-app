@@ -141,14 +141,16 @@ class Add extends AbstractAdminController {
 
     public function  getList() : void
     {
+        echo 123;
+        exit;
         $this->page()->title('Author Listing')->index(610, 20)
             ->prop("icon", "mdi mdi-account-plus-outline");
-
         $this->breadcrumbs("Test Control", null, "ion ion-ios-people");
         $template = $this->template("/test/author.knit");
         //   ->assign("form", $form->array());
         $this->body($template);
     }
+
 
 
 }
