@@ -155,8 +155,7 @@ class Add extends AbstractAdminController {
     {
         $author_id = $this->input()->get("id");
         $db = $this->app->db()->primary();
-        $author = $db->query()->table(TestTable::NAME)->where('`id`=?', [$db])
-            ->fetch();
+        $author = $db->query()->table(TestTable::NAME)->where('`id`=?', [$author_id])->fetch();
         echo "<pre>";
         var_dump($author);
         exit;
