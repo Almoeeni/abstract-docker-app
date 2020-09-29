@@ -30,11 +30,12 @@
                         <td class="text-center">{$author.id}</td>
 
                         <td class="text-left"><a">{$author.email}</a></td>
-                        <td class="text-center>
-                         {$author.author}
-                        </td>
+
                         <td class="text-center">
                             {$author.author}
+                        </td>
+                        <td class="text-center>
+                         {$author.book_name}
                         </td>
                         <td class="text-center">
                             <div class="btn-group btn-group-sm">
