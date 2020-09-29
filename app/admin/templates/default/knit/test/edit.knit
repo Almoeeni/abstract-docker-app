@@ -1,6 +1,3 @@
-<?php  var_dump($editAuthor);
-exit;
-?>
 {knit "header"}
 <div class="row">
     <div class="col-12">
