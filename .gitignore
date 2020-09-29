@@ -3,6 +3,6 @@ composer.lock
 composer.phar
 workspace/
 
-sample.env
+sample.env/
 vendor/
 config/
