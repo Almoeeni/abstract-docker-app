@@ -1,3 +1,6 @@
+<?php  var_dump($authorEdit);
+exit;
+?>
 {knit "header"}
 <div class="row">
     <div class="col-12">
@@ -12,7 +15,7 @@
                         <label class="col-form-label col-md-3" for="addFullName">Book Name</label>
                         <div class="col-md-6">
                             <input type="text" name="book_name" id="addFullName" data-onload-value=""
-                                   placeholder="History" maxlength="32" class="form-control" value="{$editAuthor['book_name']}">
+                                   placeholder="History" maxlength="32" class="form-control" value="">
                         </div>
                     </div>
                     <div class="form-group row">
