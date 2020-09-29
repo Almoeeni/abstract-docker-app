@@ -153,6 +153,9 @@ class Add extends AbstractAdminController {
 
     public function getEdit()
     {
+        $this->page()->title('Edit Test')->index(610, 20)
+            ->prop("icon", "mdi mdi-account-plus-outline");
+
         $author_id = $this->input()->get("id");
         $db = $this->app->db()->primary();
         $author = $db->query()->table(TestTable::NAME)->where('`id`=?', [$author_id])->fetch()->first();
