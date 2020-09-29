@@ -153,9 +153,14 @@ class Add extends AbstractAdminController {
 
     public function getEdit()
     {
+        $author_id = $this->input()->get("id");
+        $db = $this->app->db()->primary();
+        $author = $db->query()->table(TestTable::NAME)->where('`id`=?', [$db])
+            ->fetch();
         echo "<pre>";
-        var_dump($this->input()->get("id"));
+        var_dump($author);
         exit;
+
     }
 
 }
