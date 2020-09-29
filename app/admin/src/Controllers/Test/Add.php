@@ -143,9 +143,7 @@ class Add extends AbstractAdminController {
     {
         $db = $this->app->db()->primary();
         $authors = $db->query()->table(TestTable::NAME)->fetch();
-//        echo "<pre>";
-//        var_dump($authors->all());
-//        exit;
+
         $this->page()->title('Author Listing')->index(610, 20)
             ->prop("icon", "mdi mdi-account-plus-outline");
         $this->breadcrumbs("Test Control", null, "ion ion-ios-people");
@@ -153,6 +151,11 @@ class Add extends AbstractAdminController {
         $this->body($template);
     }
 
-
+    public function getEdit()
+    {
+        echo "<pre>";
+        var_dump($this->input()->get("id"));
+        exit;
+    }
 
 }
