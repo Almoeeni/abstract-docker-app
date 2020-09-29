@@ -74,7 +74,7 @@ class Edit extends AbstractAdminController
      * @throws \App\Common\Exception\XSRF_Exception
      * @throws \Comely\Database\Exception\DatabaseException
      */
-    public function postReset(): void
+    public function   Reset(): void
     {
         $this->verifyXSRF();
         $this->totpSessionCheck(30);

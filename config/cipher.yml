@@ -4,12 +4,12 @@
 # Do NOT change these keys at ANY POINT AFTER INITIALISATION OF PROJECT! DO NOT!
 
 # Primary Cipher Key
-primary: "Primary Cipher Key"
+primary: "Primary Cipher Key1"
 # Secondary Key
-secondary: "Secondary Key"
+secondary: "Secondary Key1"
 # Users models encryption
-users: "Users models encryption"
+users: "Users models encryption1"
 # Project models encryption
-project: "Project models encryption"
+project: "Project models encryption1"
 # Misc encryption
-misc: "Misc encryption"
+misc: "Misc encryption1"
