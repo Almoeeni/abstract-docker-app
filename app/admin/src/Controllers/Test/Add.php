@@ -143,14 +143,13 @@ class Add extends AbstractAdminController {
     {
         $db = $this->app->db()->primary();
         $authors = $db->query()->table(TestTable::NAME)->fetch();
-        echo "<pre>";
-        var_dump($authors->all());
-        exit;
+//        echo "<pre>";
+//        var_dump($authors->all());
+//        exit;
         $this->page()->title('Author Listing')->index(610, 20)
             ->prop("icon", "mdi mdi-account-plus-outline");
         $this->breadcrumbs("Test Control", null, "ion ion-ios-people");
-        $template = $this->template("/test/author.knit")
-         ->assign("authors", $authors->array());
+        $template = $this->template("/test/author.knit")->assign("authors", $authors->all());
         $this->body($template);
     }
 

@@ -25,16 +25,16 @@
                     </tr>
                     </thead>
                     <tbody>
-
+                {foreach $authors as $author}
                     <tr>
-                        <td class="text-center">1</td>
+                        <td class="text-center">{$author.id}</td>
 
-                        <td class="text-left"><a">admin@gmailcom</a></td>
+                        <td class="text-left"><a">{$author.email}</a></td>
                         <td class="text-center>
-                           Harry
+                         {$author.author}
                         </td>
                         <td class="text-center">
-                            <span class="text-muted">Enabled</span>
+                          <span class="text-muted"> {$author.book_name}</span>
                         </td>
                         <td class="text-center">
                             <div class="btn-group btn-group-sm">
@@ -51,7 +51,7 @@
                             </div>
                         </td>
                     </tr>
-
+                {/foreach}
                     </tbody>
                 </table>
             </div>
