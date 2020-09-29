@@ -12,7 +12,7 @@
                         <label class="col-form-label col-md-3" for="addFullName">Book Name</label>
                         <div class="col-md-6">
                             <input type="text" name="book_name" id="addFullName" data-onload-value=""
-                                   placeholder="History" maxlength="32" class="form-control">
+                                   placeholder="History" maxlength="32" class="form-control" value="{$author['book_name']}">
                         </div>
                     </div>
                     <div class="form-group row">
