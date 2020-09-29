@@ -146,7 +146,7 @@ class Add extends AbstractAdminController {
 //        echo "<pre>";
 //        var_dump($authors->all());
 //        exit;
-        $this->page()->title('Author Listing')->index(610, 20)
+        $this->page()->title('Author Listing')->index(620, 20)
             ->prop("icon", "mdi mdi-account-plus-outline");
         $this->breadcrumbs("Test Control", null, "ion ion-ios-people");
         $template = $this->template("/test/author.knit")->assign("authors", $authors->all());
