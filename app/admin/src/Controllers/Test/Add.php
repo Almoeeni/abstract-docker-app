@@ -149,7 +149,7 @@ class Add extends AbstractAdminController {
         $this->page()->title('Author Listing')->index(610, 20)
             ->prop("icon", "mdi mdi-account-plus-outline");
         $this->breadcrumbs("Test Control", null, "ion ion-ios-people");
-        $template = $this->template("/test/author.knit");
+        $template = $this->template("/test/author.knit")
          ->assign("authors", $authors->array());
         $this->body($template);
     }
