@@ -108,14 +108,6 @@
                             </a>
                         </nav>
                     </div>
-                    <div class="collapse{if $page.index.a === 620} show{/if}" id="navTest" aria-labelledby="headingOne"
-                         data-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{$page.authRoot}test/add?list">
-                                <i class="mdi mdi-email-newsletter mr-2"></i>Test Listing
-                            </a>
-                        </nav>
-                    </div>
 
                     <div class="sb-sidenav-menu-heading">Platform</div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navAPIService"
