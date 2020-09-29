@@ -34,7 +34,7 @@
                          {$author.author}
                         </td>
                         <td class="text-center">
-                            {$author.book_name}
+                            {$author.author}
                         </td>
                         <td class="text-center">
                             <div class="btn-group btn-group-sm">
