@@ -42,7 +42,7 @@ class Edit extends AbstractAdminController
 
         try {
             if (!$this->authAdmin->privileges()->root()) {
-                if (!$this->authAdmin->privileges()->viewUsers) {
+                if (!$this->authAdmin-> ()->viewUsers) {
                     throw new AppControllerException('You do not have privilege to view users');
                 }
             }

@@ -158,12 +158,17 @@ class Add extends AbstractAdminController {
 
         $author_id = $this->input()->get("id");
         $db = $this->app->db()->primary();
-        $author = $db->query()->table(TestTable::NAME)->where('`id`=?', [$author_id])->fetch()->first();
 
+        $author = $db->query()->table(TestTable::NAME)->where('`id`=?', [$author_id])->fetch()->first();
+        $author = (object) $author;
         $template = $this->template("/test/edit.knit")->assign("edit",$author);
         $this->body($template);
 
 
     }
+//    public function postEdit()
+//    {
+//
+//    }
 
 }
